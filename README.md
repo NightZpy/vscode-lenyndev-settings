@@ -2,6 +2,8 @@
 
 This repository contains my personal VS Code configurations. These settings are tailored for a minimalist, distraction-free coding environment with Vim keybindings and a customized Catppuccin theme.
 
+![UI](https://i.ibb.co/HD9FLm8B/Screenshot-2025-04-02-at-4-55-16-AM.png)
+
 ## Installation
 
 1. Install all required extensions listed above
@@ -20,6 +22,9 @@ To fully utilize these configurations, you'll need to install the following exte
 5. [Advanced New File](https://github.com/patbenatar/vscode-advanced-new-file) - Better file creation
 6. [File Browser](https://github.com/bodil/vscode-file-browser) - Enhanced file navigation
 7. [Custom CSS and JS](https://github.com/be5invis/vscode-custom-css) - Custom styling
+
+## Font
+- [Fira Code](https://github.com/tonsky/FiraCode)
 
 ## Extension-specific Settings
 
