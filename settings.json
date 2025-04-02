@@ -1,0 +1,432 @@
+{
+    // ===== ACCESSIBILITY =====
+    // Settings that control screen reader and other accessibility features
+    // What this does: Makes VS Code more accessible for users with disabilities
+    "editor.accessibilitySupport": "on", // Optimizes UI for screen readers
+    "accessibility.signalOptions.volume": 0, // Disables sound signals for accessibility events
+
+    // ===== CORE EDITOR SETTINGS =====
+    // Settings that control how the text editor behaves and appears
+    // What this does: Configures the appearance and behavior of the text editor component
+    "editor.largeFileOptimizations": false, // Disables optimizations for large files which might affect syntax highlighting
+    "editor.lightbulb.enabled": "onCode", // Only shows the lightbulb when cursor is on actionable code
+    "editor.semanticHighlighting.enabled": true, // Enhances syntax highlighting with semantic information
+    "editor.fontFamily": "'Fira Code Light', Hack, monospace, 'Dank Mono', Menlo, Monaco, 'Courier New'",
+    "editor.fontSize": 20,
+    "editor.fontLigatures": true, // Enables font ligatures for connected characters
+    "editor.wordWrap": "wordWrapColumn", // Uses Command key (macOS) for multi-cursor operationS
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?", // Adds backtick as a word separator
+    
+    // ===== EDITOR UI ELEMENTS =====
+    // Settings that control visual elements in the editor
+    // What this does: Minimizes visual distractions for a cleaner editing experience
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.minimap.enabled": false, // Hides the minimap sidebar
+    "editor.hideCursorInOverviewRuler": false,
+    "editor.overviewRulerBorder": false, // Removes border around the overview ruler
+    "editor.matchBrackets": "always", // Always highlights matching brackets
+    "files.simpleDialog.enable": true,
+    //"editor.rulers": [],
+
+    // ===== WORKBENCH & WINDOW SETTINGS =====
+    // Settings that control the overall VS Code window and workspace appearance
+    // What this does: Creates a minimalist, distraction-free UI
+    "window.zoomLevel": 1.5,
+    "window.customTitleBarVisibility": "auto",
+    "window.titleBarStyle": "custom", // Makes titlebar use the workbench colors
+    "window.commandCenter": false, // Hides the command center from the title bar
+    "workbench.colorTheme": "Alt Catppuccin Mocha", 
+    "workbench.iconTheme": "catppuccin-latte",
+    "workbench.sideBar.location": "right", // Moves sidebar to the right side
+    "workbench.layoutControl.enabled": false, // Hides the layout controls in the top-right corner
+    "workbench.activityBar.location": "hidden", // Hides the activity bar completely
+    "workbench.statusBar.visible": true,
+    "workbench.editor.titleScrollbarSizing": "large",
+    "workbench.editor.showTabs": "single", // Shows only one tab at a time
+    "workbench.navigationControl.enabled": false, // Hides navigation buttons
+    "search.sortOrder": "type",                  // Keeps search results in the default order
+    "search.quickOpen.history.filterSortOrder": "recency", // Sorts search history by recency
+    "search.searchEditor.focusResultsOnSearch": true, // Focuses search results when using the search editor
+    "editor.lineNumbers": "relative", // Shows relative line numbers for easier navigation
+    "editor.cursorBlinking": "smooth", // Smooth cursor blinking for a more natural feel
+    "editor.cursorStyle": "line-thin", // Thin line cursor for a cleaner look
+    "editor.cursorWidth": 2, // Sets cursor width to 2 pixels
+    "editor.cursorSurroundingLines": 0, // No surrounding lines when cursor is at the edge
+    // ===== TERMINAL SETTINGS =====
+    // Settings for the integrated and external terminal
+    // What this does: Configures terminal behavior and appearance
+    "terminal.external.osxExec": "Warp", // Uses Warp as the external terminal on macOS
+    "terminal.integrated.minimumContrastRatio": 1, // Prevents VS Code from modifying terminal colors
+
+    // ===== GIT INTEGRATION =====
+    // Settings that control Git functionality
+    // What this does: Improves Git workflow efficiency
+    "git.enableSmartCommit": true, // Commits directly if no staged changes are present
+
+    // ===== LANGUAGE-SPECIFIC SETTINGS =====
+    // Settings for specific programming languages
+    // What this does: Enhances the coding experience for specific languages
+    
+    // Python settings
+    "python.analysis.autoImportCompletions": true, // Automatically adds imports when completing code
+    "python.analysis.completeFunctionParens": true, // Adds parentheses when completing function names
+    
+    // Go settings
+    "gopls": {
+        "ui.semanticTokens": true, // Enables semantic tokens for Go language server
+    },
+
+    // ===== AI ASSISTANT SETTINGS =====
+    // Settings for GitHub Copilot AI assistant
+    // What this does: Configures how the AI coding assistant behaves
+    "github.copilot.editor.enableCodeActions": false, // Disables Copilot code action suggestions
+    "github.copilot.advanced": {
+        // Advanced Copilot settings (currently empty)
+    },
+
+    // ===== EXTENSIONS SETTINGS =====
+    // Settings for VS Code extensions
+    // What this does: Configures specific extensions behavior
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 0 // Sets processor affinity for Neovim extension
+    },
+    
+    // Alt Catppuccin Theme settings
+    "alt-catppuccin.syntaxMode": "monokai", // Uses Monokai-style syntax highlighting
+
+    // ===== THEME CUSTOMIZATION =====
+    // Settings for customizing the Catppuccin theme
+    // What this does: Creates a personalized dark theme with pink accents
+    "catppuccin.accentColor": "pink", // Sets pink as the accent color
+    "catppuccin.workbenchMode": "default",
+    "catppuccin.colorOverrides": {
+        "mocha": {
+        "base": "#000000",
+        "mantle": "#010101",
+        "crust": "#020202",
+        },
+    },
+    "catppuccin.customUIColors": {
+        "mocha": {
+            "statusBar.foreground": "mauve",
+            "breadcrumb.background": "accent", // Uses current accent color (pink)
+            "breadcrumb.foreground": "crust",
+            "minimap.background": "rosewater 0.2", // Uses rosewater color at 20% opacity
+        },
+        "all": {
+            "breadcrumb.background": "overlay0",
+            "breadcrumb.foreground": "text",
+        },
+    },
+    "catppuccin.bracketMode": "monochromatic", // Uses single color for bracket pairs
+    // Advanced New File extension settings
+    // What this does: Configures the Advanced New File extension for better file management
+    "advancedNewFile.exclude": {
+        "node_modules": true,
+        "node_modules_electron": true,
+        "dev": true,
+        "dist": true
+    },
+    "advancedNewFile.showInformationMessages": true,
+    "advancedNewFile.convenienceOptions": [
+        "last",
+        "current",
+        "root"
+    ],
+    // Custom CSS and JS files to apply using the Custom CSS and JS extension
+    "vscode_custom_css.imports": [
+        "file:///Users/lenyndev/.vscode-insiders/styles/custom.css",
+        "file:///Users/lenyndev/.vscode-insiders/styles/custom.js"
+    ],
+    // ==== VIM CORE SETTINGS ====
+    "vim.useCtrlKeys": true,         // Enables Ctrl key shortcuts in Vim mode for more command options
+    "vim.useSystemClipboard": true,  // Uses system clipboard for copy/paste - makes sharing between Vim and OS easier
+    "vim.easymotion": true,          // Enables EasyMotion plugin for faster navigation around the document
+    "vim.incsearch": true,           // Shows incremental search results as you type for faster searching
+    "vim.hlsearch": true,            // Highlights all matches when searching to easily see all occurrences
+    "vim.smartcase": true,           // Case-sensitive search when using uppercase, insensitive otherwise
+    "vim.leader": "<Space>",         // Sets space as the leader key - easy to reach and common in modern Vim configs
+   
+    // ==== KEY HANDLING ====
+    // Controls which keys VS Code handles vs which Vim handles
+    "vim.handleKeys": {
+        "<C-f>": false,  // Let VS Code handle Find (Cmd+F equivalent)
+        "<C-c>": false,  // Let VS Code handle Copy
+        "<C-v>": true,  // Let VS Code handle Paste
+        "<C-z>": false,  // Let VS Code handle Undo
+        "<C-x>": false,  // Let VS Code handle Cut
+        "<C-a>": false,  // Let VS Code handle Select All
+        "<C-b>": false,  // Let VS Code handle Toggle Sidebar
+        "<C-o>": false,  // Let VS Code handle Open File dialog
+        "<C-s>": false,   // Let VS Code handle Save
+        "<C-d>": true,  // Let Vim handle half page down
+        "<C-u>": true // Let Vim        handle half page up
+    },
+    // ==== MODE-SPECIFIC KEY BINDINGS ====
+    
+    // INSERT MODE - for text entry with quick escape option
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"],
+            // Quick escape from insert mode without reaching for Escape key
+            // Typing 'kj' in quick succession returns to normal mode
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+    ],
+    // NORMAL MODE - for efficient navigation and text manipulation
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["o"],
+            "after": ["o", "<Esc>"],
+            // Open a new line below and return to normal mode
+        },
+        {
+            "before": ["O"],
+            "after": ["O", "<Esc>"],
+            // Open a new line above and return to normal mode
+        },
+        // Split navigation - move between editor panels easily
+        {
+            "before": ["<C-h>"],
+            "commands": ["workbench.action.navigateLeft"],
+            // Navigate to the left split/panel with Ctrl+h
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.navigateRight"],
+            // Navigate to the right split/panel with Ctrl+l
+        },
+        {
+            "before": ["<C-j>"],
+            "commands": ["workbench.action.navigateDown"],
+            // Navigate to the panel below with Ctrl+j
+        },
+        {
+            "before": ["<C-k>"],
+            "commands": ["workbench.action.navigateUp"],
+            // Navigate to the panel above with Ctrl+k
+        },
+        
+        // Leader key mappings for VS Code features - quick access to common actions
+        {
+            "before": ["<leader>", "e"],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.action.focusActiveEditorGroup"
+            ],
+            // Toggle sidebar visibility with Space+e
+            // Fast access to file explorer without mouse
+        },
+        // {
+        //     "before": ["<leader>", "p", "i"],
+        //     "commands": ["workbench.action.chat.openEditSession"]
+        // },
+        // {
+        //     "before": ["<leader>", "cp"],
+        //     "commands": ["workbench.panel.chat"]
+        // },
+        {
+            "before": ["<leader>", "i"],
+            "commands": ["inlineChat.start"],
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["workbench.action.quickOpen"],
+            // Quick file search with Space+f
+            // Rapidly find and open files in the project
+        },
+        {
+            "before": ["<leader>", "g"],
+            "commands": ["workbench.view.scm"],
+            // Open Git panel with Space+g
+            // Quick access to source control features
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.terminal.toggleTerminal"],
+            // Toggle terminal with Space+t
+            // Show/hide terminal without leaving keyboard
+        },
+        {
+            "before": ["<leader>", "c"],
+            "commands": ["editor.action.commentLine"],
+            // Comment/uncomment with Space+c
+            // Quickly toggle comments on current line
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": ["editor.action.triggerSuggest"],
+            // Trigger suggestions/Copilot with Space+p
+            // Show code completion without standard shortcut
+        },
+        {
+            "before": ["<leader>", "n"],
+            "commands": ["extension.advancedNewFile"],
+            // Open Advanced New File dialog with Space+n
+            // Alternative to your Cmd+N binding
+        },
+        {
+            "before": ["<leader>", "o"],
+            "commands": ["file-browser.open"],
+            // Open File Browser with Space+o
+            // Alternative to your Ctrl+Alt+O binding
+        },
+        {
+            "before": ["<leader>", ","],
+            "commands": ["workbench.action.gotoSymbol"],
+            // Open symbol search with Space+@
+            // Alternative to your Cmd+Shift+O binding
+            // Useful to quickly navigate to functions, classes, etc. in the current file
+        },
+        {
+            "before": ["<leader>", "."],
+            "commands": ["workbench.action.showAllSymbols"],
+            // Quick access to symbol search with Space+s
+            // Alternative to your Cmd+Shift+O binding
+        },        
+        {
+            "before": ["<leader>", "'"],
+            "commands": ["workbench.action.showCommands"],
+            // Open command palette with Space+m
+            // Alternative to your Cmd+Shift+P binding
+        },
+        {
+            "before": ["<leader>", "/"],
+            "commands": ["workbench.action.findInFiles"],
+            // Open command palette with Space+m
+            // Alternative to your Cmd+Shift+P binding
+        },
+        {
+            "before": ["<leader>", "r"],
+            "commands": ["workbench.action.reloadWindow"],
+            // Reload window with Space+r
+            // Useful for refreshing the editor state
+        },
+        {
+            "before": ["<leader>", "s"],
+            "commands": ["workbench.action.files.save"],
+            // Save file with Space+s
+            // Alternative to your Cmd+S binding
+        },
+        {
+            "before": ["H"],
+            "commands": ["workbench.action.previousEditor"],
+            // Navigate to the previous tab with H 
+        },
+        {
+            "before": ["L"],
+            "commands": ["workbench.action.nextEditor"],
+            // Navigate to the next tab with L
+        },        
+        // Enhanced movement - faster navigation through documents
+        {
+            "before": ["J"],
+            "after": ["5", "j"],
+            // Move down 5 lines with capital J
+            // Faster navigation through long files
+        },
+        {
+            "before": ["K"],
+            "after": ["5", "k"],
+            // Move up 5 lines with capital K
+            // Complements the J mapping for vertical movement
+        },
+        {
+            "before": ["g", "d"],
+            "commands": ["editor.action.goToDefinition"],
+        },
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.goToReferences"],
+        },
+        {
+            "before": ["g", "i"],
+            "commands": ["editor.action.goToImplementation"],
+        },
+        // Close operations
+        {
+            "before": ["<leader>", "q"],
+            "commands": ["workbench.action.closeActiveEditor"],
+            // Close current editor with Space+q
+        },
+        {
+            "before": ["<leader>", "Q"],
+            "commands": ["workbench.action.closeAllEditors"],
+            // Close all editors with Space+Q (capital Q)
+        },
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.closeEditorsAndGroup"],
+            // Close current editor group with Space+w
+            // Closes all editors in the group and removes the group itself
+        },        
+        // Split editor operations
+        {
+            "before": ["<leader>", "s"],
+            "commands": ["workbench.action.splitEditorDown"]
+        },
+        {
+            "before": ["<leader>", "v"],
+            "commands": ["workbench.action.splitEditorRight"]
+        },
+        // Maximize/Restore editor
+        {
+            "before": ["<leader>", "z"],
+            "commands": ["workbench.action.toggleEditorWidths"],
+            // Toggle maximize editor with Space+z
+            // When maximized, shows only current editor at full width
+            // When restored, returns to previous split layout
+        },
+        {
+            "before": ["<leader>", "1"],
+            "commands": ["workbench.action.focusFirstEditorGroup"],
+            // Focus first editor group with Space+1
+        },
+        {
+            "before": ["<leader>", "2"],
+            "commands": ["workbench.action.focusSecondEditorGroup"],
+            // Focus second editor group with Space+2
+        },
+        {
+            "before": ["<leader>", "3"],
+            "commands": ["workbench.action.focusThirdEditorGroup"],
+            // Focus third editor group with Space+3
+        },
+        {
+            "before": ["<leader>", "4"],
+            "commands": ["workbench.action.focusFourthEditorGroup"],
+            // Focus fourth editor group with Space+4
+        },
+    ],
+    
+    // VISUAL MODE - for text selection and bulk operations
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"],
+            // Indent selected lines with >
+            // Standard Vim behavior for indentation
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"],
+            // Outdent selected lines with <
+            // Standard Vim behavior for outdentation
+        },
+        {
+            "before": ["<leader>", "c"],
+            "commands": ["editor.action.commentLine"],
+            // Comment/uncomment selected lines with Space+c
+            // Consistent with normal mode leader mapping
+        },
+        {
+            "before": ["<leader>", "v"],
+            "commands": ["editor.action.toggleColumnSelection"],
+            // Enable/disable column selection with Space+v
+        },
+    ],
+}

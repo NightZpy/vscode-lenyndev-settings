@@ -1,0 +1,125 @@
+.part.titlebar {
+  background: transparent !important;
+  border: transparent !important;
+}
+
+.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
+  border: transparent !important;
+  background: transparent !important;
+}
+
+.titlebar-container {
+  background: transparent !important;
+  background-color: rgb(30, 30, 46) !important;
+  border-color: rgb(30, 30, 46) !important;
+}
+
+/* Project Title */
+/* .titlebar-left {
+  justify-content: flex-end !important;
+  flex-grow: 0 !important;
+  width: 75px !important;
+}
+*/
+
+.window-title { 
+  display: none !important;
+}
+
+.sticky-widget {
+  display: none !important;
+}
+
+/* .codicon-copilot {
+  display: none !important;
+}
+
+.title-actions {
+  display: none !important;
+} */
+
+/* Sidebar top shadow */
+/* .monaco-scrollable-element>.shadow.top {
+  box-shadow: 0px 0px 30px rgba(45, 45, 63) !important;
+  top: -3px !important;
+} */
+
+/* Code canvas top shadow */
+.monaco-editor .scroll-decoration {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .75) !important;
+  top: -6px !important;
+}
+
+/* .--vscode-editor-background {
+  background-color: #181825 !important;
+} */
+
+/* .window-title{
+  visibility: hidden;
+  display: none !important;
+} */
+
+/* Side bar */
+.part.sidebar {
+  box-shadow: 0px 0px 50px rgb(0, 0, 0, .75) !important;
+}
+body .monaco-workbench .part.sidebar * {
+  background-color: rgb(30, 30, 46) !important;
+  border-color: rgb(30, 30, 46) !important;
+  border: transparent !important;
+  box-shadow: none !important;
+}
+
+/* .part.sidebar > .composite.title {
+  box-shadow: 0px 0px 50px rgba(26, 47, 86, 0.25);
+  background-color: rgb(30, 30, 46) !important;
+  border-color: rgb(30, 30, 46) !important;
+} */
+
+/* .part.sidebar > .content > .composite.viewlet {
+  background-color: rgb(30, 30, 46) !important;
+  border-color: rgb(30, 30, 46) !important;
+} */
+
+/* Tooltip box style */
+.monaco-editor-hover,
+.monaco-hover {
+    box-shadow: 0px 8px 32px rgba(0,0,0,.45) !important;
+    /* padding: 10px !important; */
+    background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
+    backdrop-filter: blur(3px) !important;
+    border-radius: 16px !important;
+    border: none !important;
+    outline: 0px !important;
+}
+
+/* ------- */
+/* Estilos para breadcrumbs */
+/* Estilo para la parte izquierda - nombre del archivo actual */
+.breadcrumbs .monaco-icon-label .monaco-icon-label-container .monaco-icon-name-container .label-name {
+  font-weight: bold !important;
+  font-size: 20px !important;
+  color: #cba6f7 !important; 
+}
+
+
+.title.breadcrumbs {
+  /* No ocultes por defecto, JavaScript lo hará */
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+/* Estilo para la parte izquierda - nombre del archivo actual */
+.breadcrumbs .monaco-breadcrumb-item:last-child .monaco-icon-label .monaco-icon-label-container .monaco-icon-name-container .label-name {
+  font-weight: lighter !important;
+  font-size: 16px !important;
+  color: #d4b9f5 !important; 
+}
+
+/* Estilo para la parte derecha - ruta de navegación */
+.breadcrumbs .monaco-breadcrumb-item:not(:last-child) .monaco-icon-label .monaco-icon-label-container .monaco-icon-name-container .label-name {
+  font-size: 18px !important;
+  font-weight: normal !important;
+  color: #bac2de !important; 
+}
+
+

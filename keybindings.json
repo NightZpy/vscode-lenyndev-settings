@@ -1,0 +1,170 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+cmd+z",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+k",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "toggleVim"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "editor.foldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+0",
+        "command": "-editor.foldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "alt+m",
+        "command": "pylance.extractMethodWithRename"
+    },
+    {
+        "key": "ctrl+shift+f5",
+        "command": "cmake.launchTarget",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
+    },
+    {
+        "key": "ctrl+shift+f5",
+        "command": "-cmake.launchTarget",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode" }, { "key": "ctrl+f9", "command": "python.execInTerminal-icon" }, { "key": "ctrl+f10", "command": "debugpy.debugInTerminal" }, { "key": "alt+numpad5", "command": "editor.action.smartSelect.expand", "when": "editorTextFocus" }, { "key": "ctrl+shift+cmd+right", "command": "-editor.action.smartSelect.expand", "when": "editorTextFocus" }, { "key": "alt+numpad8", "command": "editor.action.smartSelect.shrink", "when": "editorTextFocus" }, { "key": "ctrl+shift+cmd+left", "command": "-editor.action.smartSelect.shrink", "when": "editorTextFocus" }, { "key": "ctrl+alt+cmd+k", "command": "workbench.action.terminal.kill" }, { "key": "shift+alt+k", "command": "workbench.action.terminal.killAll" }, { "key": "cmd+numpad6", "command": "workbench.action.splitEditorRight" }, { "key": "cmd+k cmd+\\", "command": "-workbench.action.splitEditorRight" }, { "key": "cmd+numpad4", "command": "workbench.action.splitEditorLeft" }, { "key": "cmd+k cmd+\\", "command": "-workbench.action.splitEditorLeft" }, { "key": "cmd+numpad2", "command": "workbench.action.splitEditorDown" }, { "key": "cmd+k cmd+\\", "command": "-workbench.action.splitEditorDown" }, { "key": "cmd+numpad8", "command": "workbench.action.splitEditorUp" }, { "key": "cmd+k cmd+\\", "command": "-workbench.action.splitEditorUp" }, { "key": "ctrl+cmd+w", "command": "workbench.action.closeEditorsAndGroup" }, { "key": "ctrl+shift+t", "command": "workbench.action.terminal.toggleTerminal", "when": "terminal.active" }, { "key": "ctrl+`", "command": "-workbench.action.terminal.toggleTerminal", "when": "terminal.active" }, {
+        "key": "ctrl+shift+c",
+        "command": "workbench.action.toggleMultiCursorModifier"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "welcome.showNewFileEntries"
+    },
+    {
+        "key": "ctrl+alt+cmd+n",
+        "command": "-welcome.showNewFileEntries"
+    },
+    {
+        "key": "cmd+n", // "cmd+n" on mac
+        "command": "extension.advancedNewFile",
+    },
+    {
+        "key": "ctrl+cmd+c",
+        "command": "editor.action.toggleColumnSelection"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "workbench.action.output.toggleOutput"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.tasks.build"
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.debug.start"
+    },
+    {
+        "key": "f6",
+        "command": "workbench.action.debug.stop"
+    },
+    {
+        "key": "f10",
+        "command": "workbench.action.debug.stepOver"
+    },
+    {
+        "key": "f11",
+        "command": "workbench.action.debug.stepInto"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "file-browser.open"
+    },
+    {
+        "key": "ctrl+alt+a",
+        "command": "file-browser.actions",
+        "when": "inFileBrowser"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-file-browser.actions",
+        "when": "inFileBrowser"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.chat.history",
+        "when": "view == 'workbench.panel.chat.view.copilot'"
+    },
+    // Tab and Shift+Tab for indentation when are in Vim mode
+    /* {
+        "key": "tab",
+        "command": "tab",
+        "when": "editorTextFocus && !editorTabMovesFocus"       
+    },
+    {
+        "key": "shift+tab",
+        "command": "outdent",
+        "when": "editorTextFocus && !editorTabMovesFocus"
+    } */
+    {
+        "command": "germanScroll.arminUp",
+        "key": "ctrl+y",
+        "mac": "cmd+y",
+        "when": "vim.active && editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "command": "germanScroll.arminDown",
+        "key": "ctrl+e",
+        "mac": "cmd+e",
+        "when": "vim.active && editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "command": "germanScroll.bertholdUp",
+        "key": "ctrl+u",
+        "mac": "cmd+u",
+        "when": "vim.active && editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "command": "germanScroll.bertholdDown",
+        "key": "ctrl+d",
+        "mac": "cmd+d",
+        "when": "vim.active && editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "command": "germanScroll.christaUp",
+        "key": "ctrl+b",
+        "mac": "cmd+b",
+        "when": "vim.active && editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "command": "germanScroll.christaDown",
+        "key": "ctrl+f",
+        "mac": "cmd+f",
+        "when": "vim.active && editorTextFocus && vim.mode != 'Insert'"
+    },
+]
